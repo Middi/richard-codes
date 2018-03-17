@@ -26,11 +26,33 @@
 		"oF": 0,
 		"oS": 3
 		},
+	"\/assets\/img\/avatar.png": {
+		"ft": 32768,
+		"iS": 34138,
+		"oA": 0,
+		"oAP": "\/assets\/img\/avatar.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
 	"\/assets\/img\/bg-pattern.png": {
 		"ft": 32768,
 		"iS": 69846,
 		"oA": 0,
 		"oAP": "\/assets\/img\/bg-pattern.png",
+		"oF": 0,
+		"oIPL": 1,
+		"opt": 1,
+		"oT": 1,
+		"q": 100
+		},
+	"\/assets\/img\/hero.png": {
+		"ft": 32768,
+		"iS": 482453,
+		"oA": 0,
+		"oAP": "\/assets\/img\/hero.png",
 		"oF": 0,
 		"oIPL": 1,
 		"opt": 1,
