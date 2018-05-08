@@ -2,6 +2,12 @@
 @import 'colors';
 @import 'typography';
 
+
+.container {
+    width: 1200px;
+    margin: 0 auto;
+}
+
 header {
     background: url('/assets/img/hero-bg.png')repeat;
     height: 900px;
@@ -11,20 +17,7 @@ header {
     align-items: center;
     position: relative;
     overflow: hidden;
-    &::after {
-        height: 94px;
-        width: 100px;
-        background-color: black;
-        color: white;
-        text-align: center;
-        line-height: 94px;
-        font-size: 40px;
-        content: "↓";
-        position: absolute;
-        bottom: 0;
-        transform: skew(-10deg);
-        transform-origin: 0 162px;
-    }
+    
 }
 
 .hero-skew {
@@ -36,6 +29,14 @@ header {
     right: 0;
     transform: skew(-10deg);
     transform-origin: 0 100%;
+    &::after {
+        height: 94px;
+        width: 100px;
+        background-color: black;
+        content: '';
+        position: absolute;
+        bottom: 0;
+    }
 }
 
 .hero-container {
@@ -45,10 +46,21 @@ header {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
+    &::after {
+        color: white;
+        text-align: center;
+        line-height: 94px;
+        font-size: 40px;
+        content: "↓";
+        position: absolute;
+        bottom: 0;
+        transform: translateX(16px);
+    }
 }
 
 .hero-text {
     max-width: 520px;
+    margin: 0 30px;
     .avatar {
         width: 60px;
     }
@@ -58,15 +70,32 @@ header {
     }
 }
 
-iframe {box-shadow: 6px 6px 12px 2px rgba($black, 0.5)}
+iframe {
+    margin: 0 30px;
+    box-shadow: 6px 6px 12px 2px rgba($black, 0.5);
+}
 
 .about {
     background-image: url('/assets/img/about-bg.jpg');
     background-size: contain;
     background-repeat: no-repeat;
-    height: 1074px;
+    height: 830px;
     width: 100%;
     position: relative;
+    display: flex;
+    align-items: center;
+    &-container {
+        display: flex;
+        justify-content: space-between;
+        &-text {
+            z-index: 10;
+            width: 50%;
+        }
+    }
+    .signature {
+        width: 196px;
+        margin: 1.8em 0 -1.2em;
+    }
 }
 
 .about-skew {
@@ -76,6 +105,7 @@ iframe {box-shadow: 6px 6px 12px 2px rgba($black, 0.5)}
     position: absolute;
     top: 0;
     right: 0;
+    z-index: 1;
     transform: skew(-8deg);
     transform-origin: 0 0;
 }

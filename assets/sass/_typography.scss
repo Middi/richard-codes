@@ -31,6 +31,13 @@ h2 {
     margin: 2em 0 0;
 }
 
+.h2-display {
+    font-size: 2.1em;
+    line-height: 1.4em;
+    font-weight: 900;
+    margin: 2em 0 .9em;
+}
+
 h4 {
     font-size: 1em;
     margin: .25em 0;
@@ -51,8 +58,10 @@ h5 {
     color: $brand;
     background-color: black;
     margin: 0 7px;
-    padding: 1px 10px 0px;
+    padding: 2px 10px;
     text-transform: uppercase;
+    z-index: 20;
+    display: inline;
 }
 
 p, a, li, textarea {
@@ -74,6 +83,14 @@ textarea {
 
 p, li, a,  {
     font-size: 1.42rem;
+}
+
+strong {
+    font-weight: 900;
+}
+
+.p-display {
+    margin: 1.1em 0;
 }
 
 .span-display {
