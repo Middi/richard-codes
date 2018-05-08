@@ -1,3 +1,4 @@
 .sass-cache/
 *.css.map
 config.codekit3
+.gitignore
