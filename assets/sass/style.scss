@@ -1,2 +1,71 @@
 @import 'normalise';
 @import 'colors';
+@import 'typography';
+
+body {
+    overflow: hidden;
+}
+
+header {
+    background: url('/assets/img/hero-bg.png')repeat;
+    height: 900px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    &::after {
+        height: 94px;
+        width: 100px;
+        background-color: black;
+        color: white;
+        text-align: center;
+        line-height: 94px;
+        font-size: 40px;
+        content: "↓";
+        position: absolute;
+        bottom: 0;
+        transform: skew(-8deg);
+        transform-origin: 0 313px;
+    }
+}
+
+.yellow-hero {
+    background-color: $brand;
+    width: 51%;
+    height: 900px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform: skew(-8deg);
+    transform-origin: 0 100%;
+}
+
+.hero-container {
+    max-width: 1200px;
+    z-index: 10;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.hero-text {
+    max-width: 520px;
+    .avatar {
+        width: 60px;
+    }
+    &-upper {
+        display: flex;
+        align-items: center;
+    }
+}
+
+iframe {box-shadow: 6px 6px 12px 2px rgba($black, 0.5)}
+
+.about {
+    background: url('/assets/img/hero-bg.png')repeat;
+    height: 900px;
+    width: 100%;
+    position: relative;
+}
