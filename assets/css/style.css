@@ -88,7 +88,7 @@ h5 {
   color: #fbd00a;
   background-color: black;
   margin: 0 7px;
-  padding: 1px 10px;
+  padding: 1px 10px 0px;
   text-transform: uppercase; }
 
 p, a, li, textarea {
@@ -143,9 +143,6 @@ figcaption {
   font-weight: 400;
   margin: 0; }
 
-body {
-  overflow: hidden; }
-
 header {
   background: url("/assets/img/hero-bg.png") repeat;
   height: 900px;
@@ -159,7 +156,8 @@ header {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  position: relative; }
+  position: relative;
+  overflow: hidden; }
   header::after {
     height: 94px;
     width: 100px;
@@ -171,20 +169,20 @@ header {
     content: "↓";
     position: absolute;
     bottom: 0;
-    -webkit-transform: skew(-8deg);
-            transform: skew(-8deg);
-    -webkit-transform-origin: 0 313px;
-            transform-origin: 0 313px; }
+    -webkit-transform: skew(-10deg);
+            transform: skew(-10deg);
+    -webkit-transform-origin: 0 162px;
+            transform-origin: 0 162px; }
 
-.yellow-hero {
+.hero-skew {
   background-color: #fbd00a;
-  width: 51%;
+  width: 52%;
   height: 900px;
   position: absolute;
   top: 0;
   right: 0;
-  -webkit-transform: skew(-8deg);
-          transform: skew(-8deg);
+  -webkit-transform: skew(-10deg);
+          transform: skew(-10deg);
   -webkit-transform-origin: 0 100%;
           transform-origin: 0 100%; }
 
@@ -216,3 +214,23 @@ header {
 iframe {
   -webkit-box-shadow: 6px 6px 12px 2px rgba(0, 0, 0, 0.5);
           box-shadow: 6px 6px 12px 2px rgba(0, 0, 0, 0.5); }
+
+.about {
+  background-image: url("/assets/img/about-bg.jpg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  height: 1074px;
+  width: 100%;
+  position: relative; }
+
+.about-skew {
+  background-color: white;
+  width: 52%;
+  height: 1074px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  -webkit-transform: skew(-8deg);
+          transform: skew(-8deg);
+  -webkit-transform-origin: 0 0;
+          transform-origin: 0 0; }

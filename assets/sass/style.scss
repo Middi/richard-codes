@@ -2,10 +2,6 @@
 @import 'colors';
 @import 'typography';
 
-body {
-    overflow: hidden;
-}
-
 header {
     background: url('/assets/img/hero-bg.png')repeat;
     height: 900px;
@@ -14,6 +10,7 @@ header {
     justify-content: center;
     align-items: center;
     position: relative;
+    overflow: hidden;
     &::after {
         height: 94px;
         width: 100px;
@@ -25,19 +22,19 @@ header {
         content: "↓";
         position: absolute;
         bottom: 0;
-        transform: skew(-8deg);
-        transform-origin: 0 313px;
+        transform: skew(-10deg);
+        transform-origin: 0 162px;
     }
 }
 
-.yellow-hero {
+.hero-skew {
     background-color: $brand;
-    width: 51%;
+    width: 52%;
     height: 900px;
     position: absolute;
     top: 0;
     right: 0;
-    transform: skew(-8deg);
+    transform: skew(-10deg);
     transform-origin: 0 100%;
 }
 
@@ -64,8 +61,21 @@ header {
 iframe {box-shadow: 6px 6px 12px 2px rgba($black, 0.5)}
 
 .about {
-    background: url('/assets/img/hero-bg.png')repeat;
-    height: 900px;
+    background-image: url('/assets/img/about-bg.jpg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 1074px;
     width: 100%;
     position: relative;
+}
+
+.about-skew {
+    background-color: white;
+    width: 52%;
+    height: 1074px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform: skew(-8deg);
+    transform-origin: 0 0;
 }
