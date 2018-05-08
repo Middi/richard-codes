@@ -1,26 +1,2 @@
 @import 'normalise';
 @import 'colors';
-
-.header {
-    height: 850px;
-    width: 100%;
-    background: url('../img/hero.png');
-    background-size: cover;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    &-container {
-        display: flex;
-        max-width: 1400px;
-        border: 2px solid black;
-
-        &-content {
-            &-header {
-                img {
-                    width: 50px;
-                }
-            }
-        }
-    }
-}
