@@ -284,17 +284,24 @@ iframe {
           .about-container-text-socials .socials path {
             -webkit-transition: fill .4s ease;
             transition: fill .4s ease; }
-          .about-container-text-socials .socials:hover:nth-child(1) path {
-            fill: #BC2A8D; }
-          .about-container-text-socials .socials:hover:nth-child(2) path {
-            fill: #FF0000; }
-          .about-container-text-socials .socials:hover:nth-child(3) path {
-            fill: #6441A4; }
-          .about-container-text-socials .socials:hover:nth-child(n+4) path {
-            fill: #181717; }
   .about .signature {
     width: 240px;
     margin: 1.8em 0 -1.2em -1.4em; }
+
+#instagram:hover path {
+  fill: #BC2A8D; }
+
+#youtube:hover path {
+  fill: #FF0000; }
+
+#twitch:hover path {
+  fill: #6441A4; }
+
+#github:hover path {
+  fill: #181717; }
+
+#email:hover path {
+  fill: #181717; }
 
 .about-skew {
   background-color: white;

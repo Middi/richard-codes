@@ -106,18 +106,19 @@ iframe {
                     display: flex;
                     transition: all 2s ease;
                     path {transition: fill .4s ease}
-                    &:hover:nth-child(1) {
-                        path {fill: $instagram}
-                    }
-                    &:hover:nth-child(2) {
-                        path {fill: $youtube}
-                    }
-                    &:hover:nth-child(3) {
-                        path {fill: $twitch}
-                    }
-                    &:hover:nth-child(n+4) {
-                        path {fill: $github}
-                    }
+                    // &:hover:nth-child(1) {
+                    //     a path {fill: $instagram}
+                        
+                    // }
+                    // &:hover:nth-child(2) {
+                    //    path {fill: $youtube}
+                    // }
+                    // &:hover:nth-child(3) {
+                    //    path {fill: $twitch}
+                    // }
+                    // &:hover:nth-child(n+4) {
+                    //     path {fill: $github}
+                    // }
                 }
             }
         }
@@ -128,6 +129,27 @@ iframe {
     }
     
 }
+#instagram:hover path {
+    fill: $instagram
+}
+
+#youtube:hover path {
+    fill: $youtube
+}
+
+
+#twitch:hover path {
+    fill: $twitch
+}
+
+#github:hover path {
+    fill: $github
+}
+
+#email:hover path {
+    fill: $github
+}
+
 
 .about-skew {
     background-color: white;
