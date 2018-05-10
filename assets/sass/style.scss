@@ -19,6 +19,105 @@ header {
     overflow: hidden;
 }
 
+// NAVIGATION
+
+.container-nav {
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 100;
+}
+
+nav {
+    text-align: right;
+    transform: translateX(-60px);
+    transform: 300ms all ease;
+}
+
+ul {
+    list-style-type: none;
+    padding: 12px;
+}
+
+li {
+    border-bottom: none;
+    display: inline-block;
+}
+
+li a {
+    font-family: 'Open Sans', sans-serif;
+    color: black;
+    padding: 0 2rem;
+    text-decoration: none;
+    transition: 250ms all ease;
+}
+
+li:hover a {
+    color:  $darkest-grey;
+}
+
+
+
+/* Mobile Toggle */
+
+#navToggle {
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    transition: 300ms all ease;
+  }
+  
+  #navToggle a {
+    color: black;
+    display: block;
+    font-size: 2em;
+    font-weight: 200;
+    padding: 15px;
+    line-height: 1em;
+    text-decoration: none;
+    transition: 300ms all ease;
+  }
+  
+  #navToggle:hover a {color: red}
+  
+  
+  
+  /* Mobile */
+  @media all and (max-width: 720px) {
+    
+  .container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  nav {
+    display: none;
+    width: 100%;
+  }
+  
+  li {
+    display: block;
+    width: 100%;
+    text-align: center;
+    padding: 1.5rem 0;
+  }
+  
+  li a {font-size: 1.4rem}
+    
+  #navToggle {display: block}
+    
+  }
+  
+  
+
+  
+
+
+
+
+  
+  
 .hero-skew {
     background-color: $brand;
     width: 130%;
@@ -68,6 +167,7 @@ header {
     margin: 0 30px;
     .avatar {
         width: 60px;
+        margin-right: 10px;
     }
     &-upper {
         display: flex;
@@ -137,7 +237,7 @@ iframe {
 }
 
 #email:hover path {
-    fill: $github
+    fill: $email
 }
 
 
@@ -211,7 +311,7 @@ iframe {
             padding: 0 12px;
             &-more {
                 display: flex;
-                width: 140px;
+                width: 120px;
                 margin: 0 auto;
                 justify-content: space-between;
                 .more:hover {
@@ -226,15 +326,41 @@ iframe {
     height: 400px;
     position: relative;
     &-container {
-        height: 330px;
         width: 1150px;
+        display: flex;
         box-shadow: 4px 4px 10px 2px rgba($black, 0.2);
         background-color: white;
         position: absolute;
         bottom: -40px;
         left: 0;
         right: 0;
-        z-index: 100;
+        z-index: 1;
+        &-half {
+            width: 50%;
+            padding: 40px;
+            img {
+                width: 36px;
+                margin-right: 10px;
+            }
+            &:nth-child(1) {
+                border-right: 1px solid $middle-grey;
+            }
+        }
+        .insta-header, .twitter-header {
+            display: flex;
+            align-items: center;
+            .h4-display{color: $dark-grey}
+        }
+        .insta-grid {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: start;
+            margin: 15px 0;
+            &-pic {
+                width: 90px;
+                margin: 10px 15px 10px 0;
+            }
+        }
     }
 }
 
@@ -272,3 +398,7 @@ iframe {
         }
     }
 }
+
+// .more {
+//     border: 1px solid red;
+// }
