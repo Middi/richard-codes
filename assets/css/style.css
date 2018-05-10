@@ -227,34 +227,50 @@ header {
 .container-nav {
   position: fixed;
   top: 0;
-  right: 0;
-  z-index: 100; }
+  z-index: 100;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100vw;
+  margin: 0 auto; }
 
 nav {
-  text-align: right;
-  -webkit-transform: translateX(-60px);
-          transform: translateX(-60px);
-  -webkit-transform: 300ms all ease;
-          transform: 300ms all ease; }
+  display: none;
+  text-align: right; }
 
 ul {
   list-style-type: none;
-  padding: 12px; }
+  padding: 18px 100px 28px; }
 
 li {
   border-bottom: none;
-  display: inline-block; }
+  display: inline-block;
+  padding: 0 .5rem; }
 
 li a {
-  font-family: 'Open Sans', sans-serif;
-  color: black;
-  padding: 0 2rem;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1rem;
+  color: rgba(0, 0, 0, 0.84);
+  background: #fbd00a;
+  padding: .2rem 1.3rem;
   text-decoration: none;
   -webkit-transition: 250ms all ease;
-  transition: 250ms all ease; }
+  transition: 250ms all ease;
+  border-radius: 2px; }
 
-li:hover a {
-  color: #424242; }
+li:hover a, .nav-active {
+  color: #fbd00a;
+  background-color: rgba(0, 0, 0, 0.84); }
 
 /* Mobile Toggle */
 #navToggle {
@@ -268,39 +284,45 @@ li:hover a {
 #navToggle a {
   color: black;
   display: block;
-  font-size: 2em;
+  font-size: 2.2em;
   font-weight: 200;
-  padding: 15px;
+  padding: 20px 30px;
   line-height: 1em;
   text-decoration: none;
   -webkit-transition: 300ms all ease;
   transition: 300ms all ease; }
 
 #navToggle:hover a {
-  color: red; }
+  color: #424242; }
 
 /* Mobile */
 @media all and (max-width: 720px) {
-  .container {
+  .container-nav {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
     -webkit-box-align: start;
         -ms-flex-align: start;
-            align-items: flex-start; }
+            align-items: flex-start;
+    background-image: url("/assets/img/menu-bg.png"); }
   nav {
     display: none;
-    width: 100%; }
+    width: 100%;
+    height: 100vh; }
+  ul {
+    padding: 100px 0; }
   li {
     display: block;
     width: 100%;
     text-align: center;
     padding: 1.5rem 0; }
   li a {
-    font-size: 1.4rem; }
-  #navToggle {
-    display: block; } }
+    font-size: 2rem;
+    font-weight: 600; } }
 
 .hero-skew {
   background-color: #fbd00a;
@@ -470,7 +492,7 @@ iframe {
     color: rgba(0, 0, 0, 0.84);
     padding: 6px 16px;
     margin: 8px 8px;
-    border-radius: 4px;
+    border-radius: 2px;
     font-family: Arial, Helvetica, sans-serif;
     font-weight: 900;
     font-size: .8em;
@@ -478,7 +500,8 @@ iframe {
     transition: fill .4s ease;
     cursor: pointer; }
     .filters-item:hover {
-      background-color: #f2c704; }
+      color: #fbd00a;
+      background-color: rgba(0, 0, 0, 0.84); }
   .filters .active {
     background-color: rgba(0, 0, 0, 0.84);
     color: #fbd00a; }
@@ -523,21 +546,32 @@ iframe {
   height: 400px;
   position: relative; }
   .social-container {
-    width: 1150px;
+    max-width: 1150px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    margin: 0 auto;
     -webkit-box-shadow: 4px 4px 10px 2px rgba(0, 0, 0, 0.2);
             box-shadow: 4px 4px 10px 2px rgba(0, 0, 0, 0.2);
-    background-color: white;
     position: absolute;
     bottom: -40px;
     left: 0;
     right: 0;
     z-index: 1; }
+    @media screen and (max-width: 1150px) {
+      .social-container {
+        max-width: 575px; } }
     .social-container-half {
-      width: 50%;
-      padding: 40px; }
+      -webkit-box-sizing: border-box;
+              box-sizing: border-box;
+      width: 575px;
+      padding: 40px;
+      background-color: white; }
       .social-container-half img {
         width: 36px;
         margin-right: 10px; }
