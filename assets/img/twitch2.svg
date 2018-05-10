@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="20px" height="20px" viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 3.8.1 (29687) - http://www.bohemiancoding.com/sketch -->
+    <title>twitch</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="twitch" fill="#575757">
+            <path d="M1.74083333,0 L0.4375,3.47916667 L0.4375,17.3908333 L5.2175,17.3908333 L5.2175,20 L7.8275,20 L10.4333333,17.39 L14.3458333,17.39 L19.5625,12.175 L19.5625,0 L1.74083333,0 L1.74083333,0 Z M3.47916667,1.7375 L17.825,1.7375 L17.825,11.3033333 L14.7816667,14.3466667 L10,14.3466667 L7.39416667,16.9525 L7.39416667,14.3466667 L3.47916667,14.3466667 L3.47916667,1.7375 L3.47916667,1.7375 Z" id="Shape"></path>
+            <path d="M8.2625,10.435 L10,10.435 L10,5.21833333 L8.2625,5.21833333 L8.2625,10.435 L8.2625,10.435 Z M13.0416667,10.435 L14.78,10.435 L14.78,5.21833333 L13.0416667,5.21833333 L13.0416667,10.435 L13.0416667,10.435 Z" id="Shape"></path>
+        </g>
+    </g>
+</svg>
