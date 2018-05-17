@@ -401,8 +401,7 @@ li:hover a, .nav-active {
           transform: rotate(0deg);
   z-index: 100;
   height: 30px;
-  width: 30px;
-  border-radius: 30px; }
+  width: 30px; }
 
 #navToggle:hover span {
   opacity: 0.8; }
@@ -821,8 +820,7 @@ iframe {
     font-size: 14px; }
   #navToggle {
     right: 8px;
-    top: 8px;
-    background-color: #fbd00a; }
+    top: 8px; }
   .social-container {
     max-width: 320px; }
     .social-container .insta-grid {
