@@ -414,13 +414,12 @@ li:hover a, .nav-active {
     height: 94px;
     width: 100px;
     background-color: black;
-    background-image: url("http://richardmiddleton.me/projects/richardcodes/assets/img/arrow.svg");
-    background-size: 60px;
+    background-image: url("/assets/img/arrow.svg");
     background-repeat: no-repeat;
     content: '';
     position: absolute;
     bottom: 0;
-    background-position: 14px 30px; }
+    background-position: 26px 36px; }
 
 .hero-container {
   max-width: 1200px;

@@ -1,4 +1,4 @@
-document.onload = document.querySelector('.hero-skew').classList.add("hero-animation");
+document.querySelector('.hero-skew').classList.add("hero-animation");
 
 
 const toggle = document.querySelector("#navToggle a");
@@ -41,6 +41,7 @@ if (window.addEventListener) {
         }
     }, true);
 }
+
 
 let about = false;
 let cards = false;
