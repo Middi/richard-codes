@@ -98,9 +98,10 @@
     
     html {font-size: 14px}
 
-    #navToggle a {
-        font-size: 2em;
-        padding: 16px 16px;
+    #navToggle {
+        right: 8px;
+        top: 8px;
+        background-color: $brand;
     }
 
     .social-container {
