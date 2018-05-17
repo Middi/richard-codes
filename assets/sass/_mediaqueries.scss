@@ -3,6 +3,7 @@
     header {
         background-image: url('http://richardmiddleton.me/projects/richardcodes/assets/img/mobile-bg.png');
         background-color: $brand;
+        height: 100%;
         .span-display {
             color: white;
         }
@@ -10,6 +11,8 @@
     .hero-skew {
         display: none;
     }
+
+    .hero-container iframe {margin: 10px 0}
 
     .hero-text {
         text-align: center;
