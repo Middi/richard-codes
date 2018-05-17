@@ -462,6 +462,7 @@ li:hover a, .nav-active {
 
 .hero-container {
   max-width: 1200px;
+  padding: 20px 0;
   z-index: 10;
   margin: 0 auto;
   display: -webkit-box;
@@ -783,7 +784,8 @@ iframe {
             flex-direction: column;
     -webkit-box-align: start;
         -ms-flex-align: start;
-            align-items: flex-start; }
+            align-items: flex-start;
+    position: absolute; }
   nav {
     background-image: url("http://richardmiddleton.me/projects/richardcodes/assets/img/menu-bg.png");
     width: 100%;
