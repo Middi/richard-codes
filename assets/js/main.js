@@ -104,10 +104,6 @@ window.addEventListener("scroll", function () {
 initSmoothScrolling();
 
 function initSmoothScrolling() {
-    if (isCssSmoothSCrollSupported()) {
-        document.getElementById('css-support-msg').className = 'supported';
-        return;
-    }
 
     var duration = 400;
 
@@ -133,10 +129,6 @@ function initSmoothScrolling() {
                     setFocus(e.target.hash);
                 }
             });
-            if (document.body.clientWidth < 720) {
-                nav.classList.toggle('mobile-open');
-                document.querySelector('#navToggle').classList.toggle('open');
-            }
         }
     }
 
@@ -187,6 +179,7 @@ function initSmoothScrolling() {
 }
 
 function jump(target, options) {
+    
     var
         start = window.pageYOffset,
         opt = {
@@ -224,6 +217,15 @@ function jump(target, options) {
 
         if (typeof opt.callback === 'function')
             opt.callback();
+
+            if (document.body.clientWidth > 720) {
+                ul.classList.remove('menu-open');
+                document.querySelector('#navToggle').classList.remove('open');
+            }
+            else {
+                nav.classList.remove('mobile-open');
+                document.querySelector('#navToggle').classList.remove('open');
+            }
     }
 
     function easeInOutQuad(t, b, c, d) {
