@@ -22,8 +22,6 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 
 body {line-height: 1}
 
-ol, ul {list-style: none}
-
 blockquote, q {quotes: none}
 
 blockquote:before, blockquote:after, q:before, q:after {
@@ -44,6 +42,15 @@ table {
 
 a {text-decoration: none}
 
+article ul {
+    padding-left: 48px;
+}
+
+article li {
+    padding: 6px 0;
+    margin: 0;
+    line-height: 1.58;
+}
 
 //--------------------------------
 // Removes webkit default styling

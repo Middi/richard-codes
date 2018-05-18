@@ -1,6 +1,7 @@
 // START SKEW ANIMATION
-document.querySelector('.hero-skew').classList.add("hero-animation");
-
+if(document.querySelector('.hero-skew')) {
+    document.querySelector('.hero-skew').classList.add("hero-animation");
+}
 
 const toggle = document.querySelector("#navToggle");
 const ul = document.querySelector('ul');
@@ -43,63 +44,67 @@ if (window.addEventListener) {
 
 
 // ANIMATION ON SCROLL
-let about = false;
-let cards = false;
-let social = false;
 
-window.addEventListener("scroll", function () {
-    if (window.pageYOffset > 180 && !about) {
-        aboutText[0].classList.toggle('about-animation');
-        about = true;
-    }
+if(!document.body.classList.contains('article')){
 
-    if (window.pageYOffset > 1180 && !cards) {
-        var i = 0;
-        function myLoop() {
-            setTimeout(function () {
-                card[i].classList.add("card-animation");
-                i++;
-                if (i < card.length) {
-                    myLoop()
-                }
-            }, 250)
+    let about = false;
+    let cards = false;
+    let social = false;
+    
+    window.addEventListener("scroll", function () {
+        if (window.pageYOffset > 180 && !about) {
+            aboutText[0].classList.toggle('about-animation');
+            about = true;
         }
-        myLoop();
-        cards = true;
-    }
-
-    if (window.pageYOffset > 2080 && !social) {
-        socialContainer.classList.toggle('social-animation');
-        social = true;
-    }
-
-
-    // ACTIVE LINKS
-    function removeLi() {
-        for (var i = 0; i < liList.length; i++) {
-            liList[i].firstElementChild.classList.remove('nav-active')
+    
+        if (window.pageYOffset > 1180 && !cards) {
+            var i = 0;
+            function myLoop() {
+                setTimeout(function () {
+                    card[i].classList.add("card-animation");
+                    i++;
+                    if (i < card.length) {
+                        myLoop()
+                    }
+                }, 250)
+            }
+            myLoop();
+            cards = true;
         }
-    }
-
-    if (window.pageYOffset < 623) {
-        removeLi();
-        liList[0].firstElementChild.classList.add("nav-active");
-    }
-    else if (window.pageYOffset > 623 && window.pageYOffset < 1400) {
-        removeLi();
-        liList[1].firstElementChild.classList.add("nav-active");
-    }
-    else if (window.pageYOffset > 1400 && window.pageYOffset < 2535) {
-        removeLi();
-        liList[2].firstElementChild.classList.add("nav-active");
-    }
-    else {
-        removeLi();
-        liList[3].firstElementChild.classList.add("nav-active");
-    }
-});
-
-
+    
+        if (window.pageYOffset > 2080 && !social) {
+            socialContainer.classList.toggle('social-animation');
+            social = true;
+        }
+    
+    
+        // ACTIVE LINKS
+        function removeLi() {
+            for (var i = 0; i < liList.length; i++) {
+                liList[i].firstElementChild.classList.remove('nav-active')
+            }
+        }
+    
+        if (window.pageYOffset < 623) {
+            removeLi();
+            liList[0].firstElementChild.classList.add("nav-active");
+        }
+        else if (window.pageYOffset > 623 && window.pageYOffset < 1400) {
+            removeLi();
+            liList[1].firstElementChild.classList.add("nav-active");
+        }
+        else if (window.pageYOffset > 1400 && window.pageYOffset < 2535) {
+            removeLi();
+            liList[2].firstElementChild.classList.add("nav-active");
+        }
+        else {
+            removeLi();
+            liList[3].firstElementChild.classList.add("nav-active");
+        }
+    });
+    
+    
+}
 
 
 // Smooth scrolling

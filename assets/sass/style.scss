@@ -21,6 +21,14 @@ header {
     position: relative;
     overflow: hidden;
 }
+.header-blog {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+}
 
 // NAVIGATION
 .container-nav {
@@ -43,7 +51,7 @@ header {
 nav {
     text-align: right;
     overflow: hidden;
-    height: 40px;
+    // height: 40px;
     margin: 18px 70px 28px;
     width: 540px;
     transition: 400ms all ease-in-out;
@@ -59,7 +67,7 @@ nav {
     z-index: 100;
 }
 
-ul {
+nav ul {
     list-style-type: none;
     padding-right: 22px;
     opacity: 1;
@@ -68,13 +76,13 @@ ul {
     z-index: 0;
 }
 
-li {
+nav ul li {
     border-bottom: none;
     display: inline-block;
     padding: 0 .5rem;
 }
 
-li a {
+nav ul li a {
     font-family: Arial, Helvetica, sans-serif;
     font-size: 1rem;
     color: $black;
@@ -85,7 +93,7 @@ li a {
     border-radius: 2px;
 }
 
-li:hover a, .nav-active {
+nav ul li:hover a, .nav-active {
     color:  $brand;
     background-color: $black;
 }
@@ -97,7 +105,6 @@ li:hover a, .nav-active {
     top: 12px;
     bottom: 0;
     transition: 300ms all ease;
-    z-index: 100;
     cursor: pointer;
     display: block;
     padding: 10px 10px;
@@ -343,6 +350,14 @@ iframe {
     }
 }
 
+.other-articles .card-container {
+    margin-bottom: 140px;
+
+    .card {
+        opacity: 1;
+    }
+}
+
 .social {
     height: 400px;
     position: relative;
@@ -424,5 +439,53 @@ iframe {
         }
     }
 }
+
+
+// BLOG SECTION
+.bg-wrapper {
+    padding-top: -80px;
+    height: 100%;
+    background-image: url('/assets/img/blog-bg.png');
+    background-repeat: repeat-x;
+}
+   
+    .article-container {
+        max-width: 700px;
+        margin: 0 auto;
+        padding: 0 20px 100px;
+        .title {
+            padding: 120px 10px 30px;
+        }
+        &-comments {
+            max-width: 660px;
+            margin: 0 auto;
+            padding: 0 20px 80px 20px;
+        }
+    
+
+    .header-content {
+        margin-top: 30px;
+        padding: 10px 0 10px;
+        display: flex;
+        align-items: center;
+        &-avatar img {
+            width: 60px;
+        }
+        &-info {
+            padding-left: 15px;
+        }
+    }
+
+    .user-row {
+        display: flex;
+        align-items: center;
+    }
+
+    figure {
+        margin-bottom: 38px;
+        img {width: 100%}
+    }
+}
+
 
 @import 'mediaqueries';
