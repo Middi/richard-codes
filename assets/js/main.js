@@ -9,6 +9,7 @@ const aboutText = document.querySelectorAll('.about-container-text');
 const card = document.querySelectorAll('.card-container .card');
 const socialContainer = document.querySelector('.social-container');
 const liList = document.querySelectorAll('nav ul li');
+const contNav = document.querySelector('#container-nav');
 
 
 // MOBILE TOGGLE
@@ -22,6 +23,7 @@ toggle.addEventListener('click', function (e) {
     else {
         nav.classList.toggle('mobile-open');
         document.querySelector('#navToggle').classList.toggle('open');
+        contNav.classList.toggle('cont-nav-open');
     }
 });
 
@@ -225,6 +227,7 @@ function jump(target, options) {
             else {
                 nav.classList.remove('mobile-open');
                 document.querySelector('#navToggle').classList.remove('open');
+                contNav.classList.toggle('cont-nav-open');
             }
     }
 

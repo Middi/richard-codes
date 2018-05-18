@@ -32,7 +32,12 @@ header {
     justify-content: space-between;
     align-items: center;
     width: 100vw;
+    height: 86px;
     margin: 0 auto;
+}
+
+.cont-nav-open {
+    height: 100vh;
 }
 
 nav {
@@ -42,11 +47,17 @@ nav {
     margin: 18px 70px 28px;
     width: 540px;
     transition: 400ms all ease-in-out;
+    z-index: 0;
 }
 
-.menu-open {transform: translateX(0px)}
+.menu-open {transform: translateX(0px);
+    z-index: 100;
+}
 
-.mobile-open {transform: translateY(0px)}
+.mobile-open {
+    transform: translateY(0px);
+    z-index: 100;
+}
 
 ul {
     list-style-type: none;
@@ -54,6 +65,7 @@ ul {
     opacity: 1;
     transition: 700ms all ease-in-out;
     transform: translateX(540px);
+    z-index: 0;
 }
 
 li {
@@ -91,7 +103,7 @@ li:hover a, .nav-active {
     padding: 10px 10px;
     transition: 300ms all ease;
     transform: rotate(0deg);
-    z-index: 100;
+    z-index: 101;
     height: 30px;
     width: 30px;
 }
@@ -153,7 +165,7 @@ li:hover a, .nav-active {
 .hero-container {
     max-width: 1200px;
     padding: 100px 0;
-    z-index: 100;
+    // z-index: 100;
     margin: 0 auto;
     display: flex;
     justify-content: center;
