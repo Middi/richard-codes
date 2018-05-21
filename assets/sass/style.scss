@@ -2,14 +2,14 @@
 @import 'colors';
 @import 'typography';
 @import 'animations';
-
-
 .container {
     max-width: 1200px;
     margin: 0 auto;
 }
 
-section:focus {outline: none}
+section:focus {
+    outline: none
+}
 
 header {
     background: url('http://richardmiddleton.me/projects/richardcodes/assets/img/hero-bg.png')repeat;
@@ -21,6 +21,7 @@ header {
     position: relative;
     overflow: hidden;
 }
+
 .header-blog {
     width: 100%;
     display: flex;
@@ -51,14 +52,14 @@ header {
 nav {
     text-align: right;
     overflow: hidden;
-    // height: 40px;
     margin: 18px 70px 28px;
     width: 540px;
     transition: 400ms all ease-in-out;
     z-index: 0;
 }
 
-.menu-open {transform: translateX(0px);
+.menu-open {
+    transform: translateX(0px)!important;
     z-index: 100;
 }
 
@@ -93,16 +94,18 @@ nav ul li a {
     border-radius: 2px;
 }
 
-nav ul li:hover a, .nav-active {
-    color:  $brand;
+nav ul li:hover a,
+.nav-active {
+    color: $brand;
     background-color: $black;
 }
 
 /* Mobile Toggle */
+
 #navToggle {
     position: absolute;
     right: 22px;
-    top: 12px;
+    top: 15px;
     bottom: 0;
     transition: 300ms all ease;
     cursor: pointer;
@@ -114,8 +117,10 @@ nav ul li:hover a, .nav-active {
     height: 30px;
     width: 30px;
 }
-  
-#navToggle:hover span {opacity: 0.8}
+
+#navToggle:hover span {
+    opacity: 0.8
+}
 
 #navToggle span {
     position: absolute;
@@ -128,27 +133,33 @@ nav ul li:hover a, .nav-active {
     transition: .25s ease-in-out;
     cursor: pointer;
 }
-  
-#navToggle span:nth-child(1) {top: 0px}
 
-#navToggle span:nth-child(2) {top: 9px}
+#navToggle span:nth-child(1) {
+    top: 0px
+}
 
-#navToggle span:nth-child(3) {top: 18px}
+#navToggle span:nth-child(2) {
+    top: 9px
+}
+
+#navToggle span:nth-child(3) {
+    top: 18px
+}
 
 #navToggle.open span:nth-child(1) {
     top: 9px;
     transform: rotate(135deg);
 }
 
-#navToggle.open span:nth-child(2) {opacity: 0}
+#navToggle.open span:nth-child(2) {
+    opacity: 0
+}
 
 #navToggle.open span:nth-child(3) {
     top: 9px;
     transform: rotate(-135deg);
 }
-  
-  
-  
+
 .hero-skew {
     background-color: $brand;
     width: 130%;
@@ -171,14 +182,13 @@ nav ul li:hover a, .nav-active {
 
 .hero-container {
     max-width: 1200px;
-    padding: 100px 0;
-    // z-index: 100;
+    padding: 100px 0; // z-index: 100;
     margin: 0 auto;
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
     animation: opacity-animation .8s ease-in .5s;
-    animation-fill-mode:forwards;
+    animation-fill-mode: forwards;
     opacity: 0;
     iframe {
         width: 560px;
@@ -233,7 +243,9 @@ iframe {
                     border-radius: 40px;
                     display: flex;
                     transition: all 2s ease;
-                    path {transition: fill .4s ease}
+                    path {
+                        transition: fill .4s ease
+                    }
                 }
             }
         }
@@ -241,9 +253,8 @@ iframe {
     .signature {
         width: 240px;
         margin: 1.8em 0 -1.2em -1.4em;
-    }    
+    }
 }
-
 
 #instagram:hover path {
     fill: $instagram
@@ -252,7 +263,6 @@ iframe {
 #youtube:hover path {
     fill: $youtube
 }
-
 
 #twitch:hover path {
     fill: $twitch
@@ -266,7 +276,6 @@ iframe {
     fill: $email
 }
 
-
 .about-skew {
     background-color: white;
     width: 52%;
@@ -278,7 +287,6 @@ iframe {
     transform: skew(-8deg);
     transform-origin: 0 0;
 }
-
 
 .projects {
     background-image: url('http://richardmiddleton.me/projects/richardcodes/assets/img/hero-bg.png');
@@ -293,7 +301,6 @@ iframe {
     flex-wrap: wrap;
     margin: 70px auto;
     max-width: 880px;
-
     &-item {
         background-color: $brand;
         color: $black;
@@ -306,7 +313,7 @@ iframe {
         transition: fill .4s ease;
         cursor: pointer;
         &:hover {
-            color:  $brand;
+            color: $brand;
             background-color: $black;
         }
     }
@@ -343,18 +350,12 @@ iframe {
                 margin: 0 auto;
                 justify-content: space-between;
                 .more:hover {
-                    path {fill: $github}
+                    path {
+                        fill: $github
+                    }
                 }
             }
         }
-    }
-}
-
-.other-articles .card-container {
-    margin-bottom: 140px;
-
-    .card {
-        opacity: 1;
     }
 }
 
@@ -387,10 +388,13 @@ iframe {
                 border-right: 1px solid $middle-grey;
             }
         }
-        .insta-header, .twitter-header {
+        .insta-header,
+        .twitter-header {
             display: flex;
             align-items: center;
-            .h4-display{color: $dark-grey}
+            .h4-display {
+                color: $dark-grey
+            }
         }
         .insta-grid {
             display: flex;
@@ -404,7 +408,6 @@ iframe {
         }
     }
 }
-
 
 .footer {
     background-color: $darkest-grey;
@@ -439,8 +442,6 @@ iframe {
         }
     }
 }
-
-
 // BLOG SECTION
 .bg-wrapper {
     padding-top: -80px;
@@ -448,44 +449,28 @@ iframe {
     background-image: url('/assets/img/blog-bg.png');
     background-repeat: repeat-x;
 }
-   
-    .article-container {
-        max-width: 700px;
-        margin: 0 auto;
-        padding: 0 20px 100px;
-        .title {
-            padding: 120px 10px 30px;
-        }
-        &-comments {
-            max-width: 660px;
-            margin: 0 auto;
-            padding: 0 20px 80px 20px;
-        }
-    
 
-    .header-content {
-        margin-top: 30px;
-        padding: 10px 0 10px;
-        display: flex;
-        align-items: center;
-        &-avatar img {
-            width: 60px;
-        }
-        &-info {
-            padding-left: 15px;
-        }
-    }
-
-    .user-row {
-        display: flex;
-        align-items: center;
-    }
-
+.article-container {
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 0 20px 100px;
+    .title {padding: 120px 10px 30px}
     figure {
         margin-bottom: 38px;
         img {width: 100%}
     }
 }
 
+.other-articles .card-container {
+    margin-bottom: 140px;
+    .card {opacity: 1}
+}
+
+.article nav {
+    width: 200px;
+    ul {
+        transform: translateX(160px);
+    }
+}
 
 @import 'mediaqueries';

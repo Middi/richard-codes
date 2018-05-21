@@ -1,10 +1,12 @@
 // START SKEW ANIMATION
-if(document.querySelector('.hero-skew')) {
+// Check to see if skew is there.
+if(!document.body.classList.contains('article')){
     document.querySelector('.hero-skew').classList.add("hero-animation");
 }
 
+// GRAB ELEMENTS
 const toggle = document.querySelector("#navToggle");
-const ul = document.querySelector('ul');
+const ul = document.querySelector('nav ul');
 const nav = document.querySelector('nav');
 const aboutText = document.querySelectorAll('.about-container-text');
 const card = document.querySelectorAll('.card-container .card');
@@ -14,7 +16,7 @@ const contNav = document.querySelector('#container-nav');
 
 
 // MOBILE TOGGLE
-toggle.addEventListener('click', function (e) {
+toggle.addEventListener('click', function(e) {
     e.preventDefault();
 
     if (document.body.clientWidth > 720) {
@@ -31,8 +33,8 @@ toggle.addEventListener('click', function (e) {
 
 // KONAMI CODE
 if (window.addEventListener) {
-    var keys = [],
-        konami = "38,38,40,40,37,39,37,39,66,65,13";
+    let keys = [];
+    const konami = "38,38,40,40,37,39,37,39,66,65,13";
     window.addEventListener("keydown", function (e) {
         keys.push(e.keyCode);
         if (keys.toString().indexOf(konami) >= 0) {
@@ -44,7 +46,6 @@ if (window.addEventListener) {
 
 
 // ANIMATION ON SCROLL
-
 if(!document.body.classList.contains('article')){
 
     let about = false;
